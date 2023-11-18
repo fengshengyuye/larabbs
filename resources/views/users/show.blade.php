@@ -8,7 +8,7 @@
 
         <div class="col-lg-3 col-md-3 hidden-sm hidden-xs user-info">
             <div class="card ">
-                <img class="card-img-top" src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fsafe-img.xhscdn.com%2Fbw1%2F8ca61ee2-dbe4-41a7-93e1-893930c9a3c4%3FimageView2%2F2%2Fw%2F1080%2Fformat%2Fjpg&refer=http%3A%2F%2Fsafe-img.xhscdn.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1702877282&t=10f380728f3df61620416e101209e023" alt="{{ $user->name }}">
+                <img class="card-img-top" src="{{ $user->avatar }}" alt="{{ $user->name }}">
                 <div class="card-body">
                     <h5><strong>个人简介</strong></h5>
                     <p>{{ $user->introduction }}</p>
