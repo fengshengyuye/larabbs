@@ -27,10 +27,7 @@
                         </a>
 
                         <span> • </span>
-                        <a class="text-secondary" href="{{ route('categories.show', $topic->category_id) }}" title="{{ $topic->category->name }}">
-                            <i class="far fa-folder"></i>
-                            {{ $topic->category->name }}
-                        </a>
+                        <a class="text-secondary" href="{{ route('users.show', [$topic->user_id]) }}" title="{{ $topic->user->name }}">
                             <i class="far fa-user"></i>
                             {{ $topic->user->name }}
                         </a>
