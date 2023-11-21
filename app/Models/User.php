@@ -19,4 +19,8 @@ class User extends Authenticatable implements MustVerifyEmailContract
         'password', 'remember_token',
     ];
     private $id;
+    public function topics()
+    {
+        return $this->hasMany(Topic::class);
+    }
 }
