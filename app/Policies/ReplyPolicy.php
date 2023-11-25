@@ -7,14 +7,10 @@ use App\Models\Reply;
 
 class ReplyPolicy extends Policy
 {
-    public function update(User $user, Reply $reply)
-    {
-        // return $reply->user_id == $user->id;
-        return true;
-    }
-
     public function destroy(User $user, Reply $reply)
     {
-        return true;
+//当前登录用户是这条评论的所有者或者当前帖子是当前登录用户的帖子
+//        $reply->$topic->user_id == $user->id;
+        return $reply->user_id == $user->id || $reply->topic->user_id==$user->id;
     }
 }
